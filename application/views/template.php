@@ -23,9 +23,8 @@ if (!defined('APPPATH'))
                 <h1>{pagetitle}</h1>
                 {content}
             </div>
-            <div>
-                <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. 
-                {ci_version}</p>
+            <div class="footer">
+                <p>© 2017 ANewFuego, Inc</p>
             </div>     
         </div>
         <script src="/assets/js/jquery-1.11.1.min.js"></script>

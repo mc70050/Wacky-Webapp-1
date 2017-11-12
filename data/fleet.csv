@@ -1,0 +1,6 @@
+id,manufacturer,model,price,seats,reach,cruise,takeoff,hourly
+C1,Beechcraft,"King Air C90",3900,12,2446,500,1402,990
+C2,Cessna,"Citation Mustang",2770,4,2130,630,950,1015
+C3,Embraer,"Phenom 100",2980,4,2148,704,1036,926
+C4,Piaggo,"Avanti II",7195,8,2797,589,994,977
+C5,Pilatus,"PC-12 NG",3300,9,4147,500,450,727

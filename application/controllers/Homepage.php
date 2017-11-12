@@ -12,27 +12,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Homepage extends Application {
 
+    /*
+     * Prints elements in the array for testing purposes.
+     */
+    public function printArray($arr) {
+        echo '<pre>';
+        print_r($arr);
+        echo '</pre>';
+    }
+    
+    /*
+     * Returns the plane destinations.
+     */
+    public function getFlightDestination($arr) {
+        $destination = array();  
+        foreach($arr as $flights) {
+            if(!in_array($flights->arrival, $destination)) {
+                array_push($destination, $flights->arrival);
+            }
+        }
+        return $destination;
+    }
+    
+    
+    
     /**
      * Homepage controller.
      */
     public function index() {
         $flightData = $this->flights_model->all();
         $planesSource = $this->planes->all();
-        $destination = array();
-        foreach($flightData as $flights) {
-            if(!in_array($flights['airline'], $destination)) {
-                array_push($destination, $flights['airline']);
-            }
-        }
+        $destination = $this->getFlightDestination($flightData);
         //Split the array up with commas
         $role = $this->session->userdata('userrole');    
         $this->data['pagetitle'] = 'Homepage ('. $role . ')';
         $this->data['destinationAirline'] = implode(', ', $destination);
         $this->data['numOfPlanes'] = count($planesSource);
         $this->data['numOfFlights'] = count($flightData);
+        
         $this->data['pagebody'] = 'homepage';
-        $this->data['income'] = '$16,777,216';
         $this->render();
     }
-
 }

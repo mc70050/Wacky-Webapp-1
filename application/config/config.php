@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -8,9 +9,10 @@ $config['menu_choices'] = array(
         //'name' => 'Homepage' Note: 'Homepage' will display in navbar
         //'link' => '/homepage' Note: '/homepage' is the controller
         array('name' => 'Homepage', 'link' => '/homepage'),
-        array('name' => 'Fleets', 'link' => '/fleet'),
-        array('name' => 'Flights', 'link' => '/flights'),
-        array('name' => 'Info', 'link' => '/info')
+        array('name' => 'Fleets', 'link' => 'fleet'),
+        array('name' => 'Flights', 'link' => 'flights'),
+        array('name' => 'Flight Booking', 'link' => 'flightbooking'),
+        array('name' => 'Info', 'link' => 'info/info')
     )
 );
 
@@ -524,3 +526,4 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+

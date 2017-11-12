@@ -1,0 +1,13 @@
+id,model,departure,arrival,departureTime,arrivalTime
+C0001,"Citation Mustang",YCG,ZGF,08:00,10:00
+C0002,"Citation Mustang",ZGF,ZMH,10:30,13:00
+C0003,"Citation Mustang",ZMH,YCG,13:30,14:30
+C0004,"Phenom 100",YCG,YCW,10:00,10:50
+C0005,"Phenom 100",YCW,ZMH,11:30,12:20
+C0007,"Phenom 100",ZMH,YCG,13:00,14:00
+C0008,"Avanti II",YCG,ZMH,12:00,13:20
+C0009,"Avanti II",ZMH,YCG,14:00,15:20
+C0010,"PC-12 NG",YCG,ZGF,14:00,16:30
+C0011,"PC-12 NG",ZGF,YCG,18:00,20:30
+C0012,"King Air C90",YCG,YCW,16:00,17:20
+C0013,"King Air C90",YCW,YCG,20:00,21:20
