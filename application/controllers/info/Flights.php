@@ -13,6 +13,10 @@ class Flights extends Application {
         $source = $this->flights_model->all();
         $this->data['pagebody'] = 'flights_page';
         $this->data['flights_model'] = $source;
+        if ($role == ROLE_OWNER) 
+                $this->data['flightadd'] = $this->parser->parse('flightadd',[], true);
+            else 
+                $this->data['flightadd'] = "";
         $this->render();
     }
 }

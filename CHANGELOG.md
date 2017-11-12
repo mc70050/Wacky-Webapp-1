@@ -15,6 +15,26 @@ Escape character = \\
 
 
 ## Version: 2.5
+Date: 11/12/2017
+Added:
+- views
+    * fleetadd.php
+    * flightsadd.php
+
+Modified:
+- controller
+    * info
+        - Fleet.php
+        - Flights.php
+- config
+    * constants.php
+- views
+    * _menubar.php
+    * fleet.php
+    * flights_page.php
+
+
+## Version: 2.5
 Date: 11/11/2017
 
 Modified:

@@ -19,4 +19,5 @@
         </tr>
         {/flights_model}
     </table>
+    {flightadd}
 </div>

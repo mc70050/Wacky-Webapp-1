@@ -11,10 +11,14 @@ class Fleet extends Application
 	public function index()
 	{
 	    $role = $this->session->userdata('userrole');
-        $this->data['pagetitle'] = 'Fleet Page ('. $role . ')';
-		$this->data['pagebody'] = 'fleet';
-        $source = $this->planes->all();
-        $this->data['planes'] = $source;
-		$this->render(); 
+            $this->data['pagetitle'] = 'Fleet Page ('. $role . ')';
+            $this->data['pagebody'] = 'fleet';
+            if ($role == ROLE_OWNER) 
+                $this->data['fleetadd'] = $this->parser->parse('fleetadd',[], true);
+            else 
+                $this->data['fleetadd'] = "";
+            $source = $this->planes->all();
+            $this->data['planes'] = $source;
+            $this->render(); 
 	}
 }

@@ -27,6 +27,7 @@
         </tr>
         {/planes}
     </table>
+    {fleetadd}
     
     <p><a href="info/fleet">Info </a></p>
     
