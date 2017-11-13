@@ -1,5 +1,3 @@
-<!-- Adding new view outline-->
-<div id="body">
     <table class="container">
         <tr>
             <td>Flight ID</td>
@@ -20,8 +18,5 @@
         </tr>
         {/flights_model}
     </table>
-    <!-- Json link-->
     <p><a href="info/flights">Info </a></p>
-</div>
-
-
+    <a href="info/flights/add"><input type="button" value="Add a new Flights"/></a>

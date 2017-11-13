@@ -27,7 +27,9 @@
         </tr>
         {/planes}
     </table>
-    
+  <!-- Adding info json-->
     <p><a href="info/fleet">Info </a></p>
+    <!-- Adding button-->
+    <a href="info/fleet/add"><input type="button" value="Add a new Fleet"/></a>
     
 </div>

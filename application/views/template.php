@@ -14,6 +14,7 @@ if (!defined('APPPATH'))
     </head>
     <body>
         <div class="container">
+            <br>
             <div class="navbar">
                 <div class="navbar-inner">
                     {menubar} 
