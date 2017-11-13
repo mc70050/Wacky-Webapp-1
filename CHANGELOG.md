@@ -1,5 +1,17 @@
 ### CHANGELOG
 
+## Version: 2.9
+Date: 11/12/2017
+
+Added:
+- public/assets/image
+    * background.jpg
+    
+Modified:
+- public/assets/css
+    * style.css
+
+
 ## Version: 2.8
 Date: 11/12/2017
 
@@ -14,6 +26,13 @@ Modified:
 ## Version: 2.7
 Date: 11/12/2017
 
+Added:
+- Views
+    * flightsx.php
+    * fleetx.php
+    * flightsitemedit.php
+    * fleettsitemedit.php
+    
 Modified:
 - Model
     * App.php
@@ -25,12 +44,6 @@ Modified:
 - Controller:
     * info/Fleet.php
     * info/Planes.php
-Added:
-- Views
-    * flightsx.php
-    * fleetx.php
-    * flightsitemedit.php
-    * fleettsitemedit.php
     
 
 ## Version: 2.6
@@ -62,7 +75,6 @@ Modified:
 Date:    11/11/2017
 
 Added:
-
 - controllers
     * FlightBooking.php
 - models
