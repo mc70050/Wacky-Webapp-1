@@ -77,7 +77,7 @@ class Fleet extends Application {
             'freach' => form_label('Reach') . form_dropdown('reach', $this->app->reach(), $plane->reach),
             'fcruise' => form_label('Cruise') . form_dropdown('cruise', $this->app->cruise(), $plane->cruise),
             'ftakeoff' => form_label('Takeoff') . form_dropdown('takeoff', $this->app->takeoff(), $plane->takeoff),
-            'zsubmit' => form_submit('submit', 'Update the TODO task'),
+            'zsubmit' => form_submit('submit', 'Update the fleet'),
         );
         $this->data = array_merge($this->data, $fields);
 
@@ -90,10 +90,21 @@ class Fleet extends Application {
         // setup for validation
         $this->load->library('form_validation');
         $this->form_validation->set_rules($this->planes->rules());
+        
+        $newFleet = array(
+            $this->app->fleetId()[$this->input->post('fleetId')],
+            $this->app->manufacturer()[$this->input->post('manufacturer')],
+            $this->app->model()[$this->input->post('model')],
+            $this->app->price()[$this->input->post('price')],
+            $this->app->seats()[$this->input->post('seats')],
+            $this->app->reach()[$this->input->post('reach')],
+            $this->app->cruise()[$this->input->post('cruise')],
+            $this->app->takeoff()[$this->input->post('takeoff')]
+        );
 
         // retrieve & update data transfer buffer
         $plane = (array) $this->session->userdata('plane');
-        $plane = array_merge($plane, $this->input->post());
+        $plane = array_merge($newFleet, $plane);
         $plane = (object) $plane;  // convert back to object
         $this->session->set_userdata('plane', (object) $plane);
 

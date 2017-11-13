@@ -84,10 +84,9 @@ class Flights extends Application {
             'farrival' => form_label('Arrival') . form_dropdown('arrival', $this->app->arrival(), $plane->arrival),
             'fdtime' => form_label('Departure Time') . form_dropdown('dTime', $this->app->dTime(), $plane->departureTime),
             'fatime' => form_label('Arrival Time') . form_dropdown('aTime', $this->app->aTime(), $plane->arrivalTime),
-            'zsubmit' => form_submit('submit', 'Update the TODO task'),
+            'zsubmit' => form_submit('submit', 'Update the Flight'),
         );
         $this->data = array_merge($this->data, $fields);
-
         $this->data['pagebody'] = 'flightitemedit';
         $this->render();
     }
@@ -98,9 +97,17 @@ class Flights extends Application {
         $this->load->library('form_validation');
         $this->form_validation->set_rules($this->planes->rules());
 
+        $newFlight = array(
+            $this->app->flightId()[$this->input->post('flightId')],
+            $this->app->model()[$this->input->post('model')],
+            $this->app->departure()[$this->input->post('departure')],
+            $this->app->arrival()[$this->input->post('arrival')],
+            $this->app->dTime()[$this->input->post('dTime')],
+            $this->app->aTime()[$this->input->post('aTime')]
+        );
         // retrieve & update data transfer buffer
         $plane = (array) $this->session->userdata('plane');
-        $plane = array_merge($plane, $this->input->post());
+        $plane = array_merge($newFlight, $plane);
         $plane = (object) $plane;  // convert back to object
         $this->session->set_userdata('plane', (object) $plane);
 
